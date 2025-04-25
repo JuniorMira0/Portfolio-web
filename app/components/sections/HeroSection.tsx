@@ -1,23 +1,18 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { Github, Linkedin, ArrowDown } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
 
-const HeroSection = () => {
-  const [accentColor, setAccentColor] = useState('#ff0000');
-  const colorOptions = [
-    '#ffffff',
-    '#f43f5e',
-    '#f97316',
-    '#facc15',
-    '#84cc16',
-    '#22d3ee',
-    '#8b5cf6',
-  ];
+interface HeroSectionProps {
+  accentColor: string;
+  setAccentColor: (color: string) => void;
+  colorOptions: string[];
+}
 
+const HeroSection: React.FC<HeroSectionProps> = ({ accentColor, setAccentColor, colorOptions }) => {
   return (
     <div className="relative flex min-h-[calc(100vh-3.5rem)] w-full items-center justify-center overflow-hidden px-4 md:px-6">
       <div className="absolute left-4 top-1/2 hidden -translate-y-1/2 flex-col items-center space-y-6 md:flex lg:left-8 xl:left-16">
@@ -50,7 +45,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Coluna Direita (Absoluta) */}
       <div className="absolute right-4 bottom-10 hidden flex-col items-center md:flex lg:right-8 xl:right-16">
         <div className="mb-4 flex flex-col items-center gap-2">
           {colorOptions.map((color) => (
@@ -88,13 +82,11 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="relative flex justify-center md:justify-end"
         >
-          {/* Container da Imagem/Bolha */}
           <div className="relative h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96">
             <div
               className="profile-picture absolute inset-0 shadow-lg"
               style={{ backgroundColor: accentColor }}
             ></div>
-            {/* Imagem Interna */}
             <div className="absolute bottom-[-3rem] left-[45%] w-[90%] -translate-x-1/2">
               <Image
                 src="/images/fotoDePerfil.png"
