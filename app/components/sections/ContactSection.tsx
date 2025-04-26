@@ -2,7 +2,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="flex min-h-screen w-full flex-col items-center justify-center p-4"
+      className="snap-start flex min-h-screen w-full flex-col items-center justify-center p-4"
     >
       <div className="w-full max-w-xl text-center">
         <h2 className="mb-8 text-4xl font-bold md:text-5xl">Contato</h2>

@@ -18,7 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
+    <html
+      lang="pt-BR"
+      suppressHydrationWarning
+      className="snap-y snap-mandatory scroll-smooth scroll-pt-14"
+    >
       <body
         className={cn('font-sans antialiased dark bg-gray-900 text-gray-100')}
       >

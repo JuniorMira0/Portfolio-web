@@ -35,7 +35,7 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="relative flex min-h-screen w-full items-center overflow-hidden bg-gray-950 px-4 md:px-6"
+      className="snap-start relative flex min-h-screen w-full flex-col justify-center overflow-hidden bg-gray-950 px-4 pt-20 pb-10 md:px-6 md:pb-12 md:pt-20 lg:pt-24 lg:pb-16"
     >
       <div className="container z-10 mx-auto grid w-full max-w-screen-lg grid-cols-1 items-center gap-12 px-4 md:grid-cols-2 md:gap-16 lg:gap-20">
         <div className="text-center md:text-left">

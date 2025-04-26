@@ -9,7 +9,7 @@ const HeroSection = () => {
   const { accentColor } = useAccentColor();
 
   return (
-    <div className="relative flex min-h-[calc(100vh-3.5rem)] w-full items-center justify-center overflow-hidden px-4 md:px-6">
+    <div className="snap-start relative flex min-h-[calc(100vh-3.5rem)] w-full items-center justify-center overflow-hidden px-4 md:px-6">
       <div className="z-10 mx-auto grid w-full max-w-screen-lg grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-12 lg:gap-16">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
