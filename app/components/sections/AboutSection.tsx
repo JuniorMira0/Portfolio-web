@@ -10,7 +10,7 @@ interface SkillBarProps {
 
 const SkillBar: React.FC<SkillBarProps> = ({ skill, percentage }) => (
   <div className="mb-4">
-    <div className="mb-1 flex justify-between text-sm text-gray-300">
+    <div className="mb-1 flex justify-between text-sm text-gray-300 md:text-xs">
       <span>{skill}</span>
     </div>
     <div className="h-1 w-full rounded-full bg-gray-700">
@@ -35,7 +35,7 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="section-bg-pattern snap-start snap-always relative min-h-[calc(100vh-3.5rem)] w-full overflow-hidden  px-4 pt-6 md:pt-6"
+      className="section-bg-pattern snap-start snap-always relative min-h-[calc(100vh-3.5rem)] w-full overflow-hidden px-4 pt-6 md:pt-6"
     >
       <div className="container z-10 mx-auto grid w-full max-w-screen-lg grid-cols-1 items-center gap-12 px-4 md:grid-cols-2 md:gap-16 lg:gap-20">
         <div className="mx-auto max-w-md md:mx-0 md:max-w-none">
@@ -45,7 +45,7 @@ const AboutSection = () => {
           >
             SOBRE MIM
           </h2>
-          <p className="mb-8 text-gray-400">
+          <p className="mb-4 text-gray-400 text-sm md:text-sm">
             Desenvolvedor Full Stack com experiência em React, Node.js e bancos
             de dados SQL/NoSQL. Estudante de Engenharia de Software e forte
             conhecimento em metodologias ágeis. Experiência na criação de APIs
