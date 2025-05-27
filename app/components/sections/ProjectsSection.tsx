@@ -29,7 +29,7 @@ const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="snap-start flex min-h-screen w-full flex-col items-center justify-center bg-gray-800 p-4" // Fundo diferente
+      className="section-bg-pattern snap-start relative snap-always flex min-h-[calc(100vh-3.5rem)] w-full flex-col items-center justify-center p-4"
     >
       <div className="w-full max-w-5xl text-center">
         <h2 className="mb-12 text-4xl font-bold md:text-5xl">Projetos</h2>
