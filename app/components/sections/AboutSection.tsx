@@ -10,7 +10,7 @@ interface SkillBarProps {
 
 const SkillBar: React.FC<SkillBarProps> = ({ skill, percentage }) => (
   <div className="mb-4">
-    <div className="mb-1 flex justify-between text-sm text-gray-300 md:text-xs">
+    <div className="mb-1 flex justify-between text-sm text-gray-300">
       <span>{skill}</span>
     </div>
     <div className="h-1 w-full rounded-full bg-gray-700">
@@ -45,7 +45,7 @@ const AboutSection = () => {
           >
             SOBRE MIM
           </h2>
-          <p className="mb-4 text-gray-400 text-sm md:text-sm">
+          <p className="mb-4 text-gray-400 md:text-sm">
             Desenvolvedor Full Stack com experiência em React, Node.js e bancos
             de dados SQL/NoSQL. Estudante de Engenharia de Software e forte
             conhecimento em metodologias ágeis. Experiência na criação de APIs
