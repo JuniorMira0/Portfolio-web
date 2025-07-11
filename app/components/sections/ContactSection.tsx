@@ -4,10 +4,10 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="section-bg-pattern snap-start snap-always relative flex min-h-screen w-full flex-col items-center justify-center p-4 py-8 md:py-12"
+      className="section-bg-pattern snap-start snap-always relative h-[calc(100vh-3.5rem)] w-full flex flex-col items-center justify-center overflow-hidden px-4"
     >
       <div className="w-full max-w-xl text-center">
-        <h2 className="mb-6 text-4xl font-bold md:text-5xl">Contato</h2>
+        <h2 className="mb-6 text-3xl font-bold md:text-4xl">Contato</h2>
         <form
           action="https://formspree.io/f/[SEU_FORM_ID]"
           method="POST"

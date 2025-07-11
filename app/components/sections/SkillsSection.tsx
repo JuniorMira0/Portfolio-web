@@ -26,16 +26,16 @@ const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className="section-bg-pattern snap-start snap-always relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden py-8 md:py-12"
+      className="section-bg-pattern snap-start snap-always relative h-[calc(100vh-3.5rem)] w-full flex flex-col items-center justify-center overflow-hidden px-4"
     >
       <div className="w-full max-w-5xl text-center px-4 sm:px-0">
         <h2
-          className="mb-8 text-4xl font-bold md:text-5xl"
+          className="mb-6 text-3xl font-bold md:text-4xl"
           style={{ color: accentColor }}
         >
           Habilidades
         </h2>
-        <div className="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
           {skillsData.map((skill) => {
             const IconComponent =
               iconMap[skill.icon as keyof typeof iconMap] || Code2;

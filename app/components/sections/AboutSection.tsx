@@ -36,12 +36,9 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="section-bg-pattern snap-start snap-always relative min-h-screen w-full overflow-hidden px-4 py-8 md:py-12"
+      className="section-bg-pattern snap-start snap-always relative h-[calc(100vh-3.5rem)] w-full overflow-hidden px-4 flex items-center"
     >
-      <div
-        className="container z-10 mx-auto grid w-full max-w-screen-lg grid-cols-1 items-center gap-8 px-4 md:grid-cols-2 md:gap-12 lg:gap-16 h-full"
-        style={{ minHeight: 'calc(100vh - 8rem)' }}
-      >
+      <div className="container z-10 mx-auto grid w-full max-w-screen-lg grid-cols-1 items-center gap-8 px-4 md:grid-cols-2 md:gap-12 lg:gap-16">
         <div className="mx-auto max-w-md md:mx-0 md:max-w-none">
           <h2
             className="mb-4 text-2xl font-semibold uppercase tracking-wider text-white md:text-3xl"

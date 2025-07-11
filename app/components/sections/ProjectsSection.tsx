@@ -7,26 +7,26 @@ const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="section-bg-pattern snap-start relative snap-always flex min-h-screen w-full flex-col items-center justify-center p-4 py-8 md:py-12"
+      className="section-bg-pattern snap-start snap-always relative h-[calc(100vh-3.5rem)] w-full flex flex-col items-center justify-center overflow-hidden px-4"
     >
       <div className="w-full max-w-5xl text-center">
-        <h2 className="mb-8 text-4xl font-bold md:text-5xl">Projetos</h2>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <h2 className="mb-6 text-3xl font-bold md:text-4xl">Projetos</h2>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {projectsData.map((project) => (
             <div
               key={project.id}
-              className="rounded-lg border border-gray-700 bg-gray-900 p-4 text-left shadow-lg transition-transform hover:scale-105"
+              className="rounded-lg border border-gray-700 bg-gray-900 p-3 text-left shadow-lg transition-transform hover:scale-105"
             >
-              <h3 className="mb-2 text-xl font-semibold">{project.title}</h3>
-              <p className="mb-4 text-sm text-gray-400">
+              <h3 className="mb-2 text-lg font-semibold">{project.title}</h3>
+              <p className="mb-3 text-sm text-gray-400">
                 {project.description}
               </p>
               {project.technologies && (
-                <div className="mb-4 flex flex-wrap gap-2">
+                <div className="mb-3 flex flex-wrap gap-1">
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="rounded-full bg-gray-800 px-3 py-1 text-xs text-gray-300"
+                      className="rounded-full bg-gray-800 px-2 py-1 text-xs text-gray-300"
                     >
                       {tech}
                     </span>
