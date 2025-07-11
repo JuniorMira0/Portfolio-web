@@ -19,12 +19,12 @@ const Header = () => {
             Junior Mira
           </span>
         </Link>
-        <nav>
+        <nav aria-label="Navegação principal">
           <ul className="flex items-center gap-5 sm:gap-6 md:gap-8">
             <li>
               <Link
                 href="#about"
-                className="text-xs font-medium uppercase tracking-wider text-gray-400 transition-colors hover:text-white"
+                className="text-xs font-medium uppercase tracking-wider text-gray-400 transition-colors hover:text-white focus:text-white focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-gray-950"
               >
                 Sobre
               </Link>
@@ -32,7 +32,7 @@ const Header = () => {
             <li>
               <Link
                 href="#projects"
-                className="text-xs font-medium uppercase tracking-wider text-gray-400 transition-colors hover:text-white"
+                className="text-xs font-medium uppercase tracking-wider text-gray-400 transition-colors hover:text-white focus:text-white focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-gray-950"
               >
                 Projetos
               </Link>
@@ -40,7 +40,7 @@ const Header = () => {
             <li>
               <Link
                 href="#contact"
-                className="text-xs font-medium uppercase tracking-wider text-gray-400 transition-colors hover:text-white"
+                className="text-xs font-medium uppercase tracking-wider text-gray-400 transition-colors hover:text-white focus:text-white focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-gray-950"
               >
                 Contato
               </Link>

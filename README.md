@@ -1,36 +1,167 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Portfólio - Junior Mira
 
-## Getting Started
+## 📋 Sobre o Projeto
 
-First, run the development server:
+Portfólio pessoal desenvolvido com Next.js 15, React 19 e TypeScript, apresentando projetos, habilidades e experiência como desenvolvedor Full Stack.
+
+## ✨ Funcionalidades
+
+- 🎨 **Tema personalizável** - Troque as cores de destaque em tempo real
+- 📱 **Design responsivo** - Interface adaptável para todos os dispositivos
+- ⚡ **Animações fluidas** - Transições suaves com Framer Motion
+- 🎯 **Typewriter effect** - Efeito de máquina de escrever na apresentação
+- ♿ **Acessibilidade** - Skip links, aria-labels e navegação por teclado
+- 🌊 **Scroll suave** - Navegação fluida entre seções
+- 🔧 **Componentes reutilizáveis** - Arquitetura modular e escalável
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Framework:** Next.js 15
+- **Linguagem:** TypeScript
+- **Styling:** Tailwind CSS
+- **Animações:** Framer Motion
+- **Efeitos:** Typewriter Effect
+- **Ícones:** Lucide React
+- **Linting:** ESLint
+- **Otimização:** Turbopack
+
+## 📦 Instalação
 
 ```bash
+# Clone o repositório
+git clone https://github.com/JuniorMira0/portfolio-web.git
+
+# Navegue até o diretório
+cd portfolio-web
+
+# Instale as dependências
+npm install
+
+# Execute o projeto em modo de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Scripts Disponíveis
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Desenvolvimento (com Turbopack)
+npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Build para produção
+npm run build
 
-## Learn More
+# Iniciar servidor de produção
+npm run start
 
-To learn more about Next.js, take a look at the following resources:
+# Linting
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Estrutura do Projeto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+app/
+├── components/
+│   ├── layout/
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   ├── SideColumnLeft.tsx
+│   │   └── SideColumnRight.tsx
+│   ├── sections/
+│   │   ├── HeroSection.tsx
+│   │   ├── AboutSection.tsx
+│   │   ├── SkillsSection.tsx
+│   │   ├── ProjectsSection.tsx
+│   │   └── ContactSection.tsx
+│   └── ui/
+│       └── SkipLink.tsx
+├── constants/
+│   ├── about.ts
+│   ├── colors.ts
+│   ├── projects.ts
+│   └── skills.ts
+├── context/
+│   └── AccentColorContext.tsx
+├── lib/
+│   └── utils.ts
+├── globals.css
+├── layout.tsx
+└── page.tsx
+```
 
-## Deploy on Vercel
+## 🎨 Personalização
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Cores de Destaque
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+As cores podem ser modificadas no arquivo `app/constants/colors.ts`:
+
+```typescript
+export const COLOR_OPTIONS = [
+  '#ffffff', // Branco
+  '#f43f5e', // Rosa
+  '#f97316', // Laranja
+  // Adicione mais cores aqui
+] as const;
+```
+
+### Dados Pessoais
+
+Atualize suas informações nos arquivos de constantes:
+
+- `app/constants/about.ts` - Informações pessoais
+- `app/constants/projects.ts` - Projetos
+- `app/constants/skills.ts` - Habilidades
+
+## 🔧 Configuração
+
+### Imagens
+
+Adicione suas fotos de perfil na pasta `public/images/`:
+
+- `fotoDePerfil.png` - Foto principal
+- `fotoDePerfil2.png` - Foto da seção "Sobre"
+
+### Formulário de Contato
+
+Para configurar o formulário de contato, edite o arquivo `app/components/sections/ContactSection.tsx` e configure um serviço como Formspree, Netlify Forms ou similar.
+
+## 🌟 Destaques Técnicos
+
+- **Performance otimizada** com Next.js 15 e Turbopack
+- **Tipagem forte** com TypeScript
+- **CSS-in-JS** com Tailwind CSS
+- **Contexto React** para gerenciamento de estado
+- **Componentes funcionais** com hooks
+- **Animações performáticas** com Framer Motion
+- **Acessibilidade** seguindo padrões WCAG
+
+## 📱 Responsividade
+
+O projeto foi desenvolvido com mobile-first approach:
+
+- **Mobile:** 320px+
+- **Tablet:** 768px+
+- **Desktop:** 1024px+
+- **Large Desktop:** 1280px+
+
+## 🤝 Contribuição
+
+Contribuições são sempre bem-vindas! Sinta-se à vontade para:
+
+- Reportar bugs
+- Sugerir melhorias
+- Submeter pull requests
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+
+## 📞 Contato
+
+- **GitHub:** [JuniorMira0](https://github.com/JuniorMira0)
+- **LinkedIn:** [junior-mira](https://www.linkedin.com/in/junior-mira/)
+- **Portfolio:** [Em breve]
+
+---
+
+⭐ Se este projeto foi útil para você, considere dar uma estrela no repositório!

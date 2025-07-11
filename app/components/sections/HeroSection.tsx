@@ -9,7 +9,7 @@ const HeroSection = () => {
   const { accentColor } = useAccentColor();
 
   return (
-    <div className="section-bg-pattern snap-start snap-always relative flex min-h-[calc(100vh-3.5rem)] w-full items-center justify-center overflow-hidden px-4 md:pt-8">
+    <div className="section-bg-pattern snap-start snap-always relative flex min-h-screen w-full items-center justify-center overflow-hidden px-4 py-8 md:py-12">
       <div className="z-10 mx-auto grid w-full max-w-screen-lg grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-12 lg:gap-16">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -49,16 +49,20 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl font-bold tracking-tighter text-gray-300 sm:text-5xl md:text-6xl lg:text-7xl"
+            className="text-2xl font-bold tracking-tighter text-gray-300 sm:text-3xl md:text-4xl lg:text-5xl min-h-[2rem] sm:min-h-[2.5rem] md:min-h-[3rem] lg:min-h-[3.5rem] flex items-center justify-center"
           >
-            <Typewriter
-              options={{
-                strings: ['Desenvolvedor<br /> Full Stack'],
-                autoStart: true,
-                delay: 60,
-                loop: true,
-              }}
-            />
+            <div className="w-full text-center md:text-left">
+              <Typewriter
+                options={{
+                  strings: ['Front end Developer'],
+                  autoStart: true,
+                  delay: 60,
+                  loop: true,
+                  deleteSpeed: 30,
+                  cursor: '|',
+                }}
+              />
+            </div>
           </motion.div>
           <motion.p
             initial={{ opacity: 0 }}

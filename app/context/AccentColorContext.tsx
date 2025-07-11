@@ -1,12 +1,13 @@
 'use client';
 
 import React, { createContext, useState, useContext, ReactNode } from 'react';
+import { COLOR_OPTIONS, DEFAULT_ACCENT_COLOR } from '../constants/colors';
 
 // Define o tipo do valor do contexto
 type AccentColorContextType = {
   accentColor: string;
   setAccentColor: React.Dispatch<React.SetStateAction<string>>;
-  colorOptions: string[];
+  colorOptions: readonly string[];
 };
 
 const AccentColorContext = createContext<AccentColorContextType | undefined>(
@@ -14,16 +15,8 @@ const AccentColorContext = createContext<AccentColorContextType | undefined>(
 );
 
 export const AccentColorProvider = ({ children }: { children: ReactNode }) => {
-  const [accentColor, setAccentColor] = useState('#ff0000');
-  const colorOptions = [
-    '#ffffff',
-    '#f43f5e',
-    '#f97316',
-    '#facc15',
-    '#84cc16',
-    '#22d3ee',
-    '#8b5cf6',
-  ];
+  const [accentColor, setAccentColor] = useState(DEFAULT_ACCENT_COLOR);
+  const colorOptions = COLOR_OPTIONS;
 
   return (
     <AccentColorContext.Provider

@@ -2,21 +2,28 @@
 import React from 'react';
 import Image from 'next/image';
 import { useAccentColor } from './../../context/AccentColorContext';
+import { ABOUT_DATA } from '../../constants/about';
 
 interface SkillBarProps {
   skill: string;
   percentage: number;
+  accentColor: string;
 }
 
-const SkillBar: React.FC<SkillBarProps> = ({ skill, percentage }) => (
+const SkillBar: React.FC<SkillBarProps> = ({
+  skill,
+  percentage,
+  accentColor,
+}) => (
   <div className="mb-4">
     <div className="mb-1 flex justify-between text-sm text-gray-300">
       <span>{skill}</span>
+      <span>{percentage}%</span>
     </div>
     <div className="h-1 w-full rounded-full bg-gray-700">
       <div
-        className="h-full rounded-full bg-white"
-        style={{ width: `${percentage}%` }}
+        className="h-full rounded-full transition-all duration-1000 ease-out"
+        style={{ width: `${percentage}%`, backgroundColor: accentColor }}
       ></div>
     </div>
   </div>
@@ -24,34 +31,26 @@ const SkillBar: React.FC<SkillBarProps> = ({ skill, percentage }) => (
 
 const AboutSection = () => {
   const { accentColor } = useAccentColor();
-  const skills = [
-    { name: 'HTML', level: 90 },
-    { name: 'CSS', level: 85 },
-    { name: 'JAVASCRIPT', level: 85 },
-    { name: 'React', level: 85 },
-    { name: 'Node.js', level: 75 },
-  ];
+  const { title, description, skills } = ABOUT_DATA;
 
   return (
     <section
       id="about"
-      className="section-bg-pattern snap-start snap-always relative min-h-[calc(100vh-3.5rem)] w-full overflow-hidden px-4 pt-6 md:pt-6"
+      className="section-bg-pattern snap-start snap-always relative min-h-screen w-full overflow-hidden px-4 py-8 md:py-12"
     >
-      <div className="container z-10 mx-auto grid w-full max-w-screen-lg grid-cols-1 items-center gap-12 px-4 md:grid-cols-2 md:gap-16 lg:gap-20">
+      <div
+        className="container z-10 mx-auto grid w-full max-w-screen-lg grid-cols-1 items-center gap-8 px-4 md:grid-cols-2 md:gap-12 lg:gap-16 h-full"
+        style={{ minHeight: 'calc(100vh - 8rem)' }}
+      >
         <div className="mx-auto max-w-md md:mx-0 md:max-w-none">
           <h2
             className="mb-4 text-2xl font-semibold uppercase tracking-wider text-white md:text-3xl"
             style={{ color: accentColor }}
           >
-            SOBRE MIM
+            {title}
           </h2>
-          <p className="mb-4 text-gray-400 md:text-sm">
-            Desenvolvedor Full Stack com experiência em React, Node.js e bancos
-            de dados SQL/NoSQL. Estudante de Engenharia de Software e forte
-            conhecimento em metodologias ágeis. Experiência na criação de APIs
-            RESTful, testes unitários e conteinerização com Docker. Focado em
-            aprimorar minhas habilidades em desenvolvimento, contribuindo para
-            projetos de alto impacto.
+          <p className="mb-4 text-gray-400 md:text-sm whitespace-pre-line">
+            {description}
           </p>
           <div>
             {skills.map((skill) => (
@@ -59,6 +58,7 @@ const AboutSection = () => {
                 key={skill.name}
                 skill={skill.name}
                 percentage={skill.level}
+                accentColor={accentColor}
               />
             ))}
           </div>
